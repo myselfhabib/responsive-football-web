@@ -9,9 +9,9 @@
 body{
     font-family: 'Oswald', sans-serif;
 }
-/* ----------->
+/* -------------->
 Font Style 
-<-------------*/
+<---------------*/
 h1{
     font-size: 80px;
     margin: 0;
@@ -39,6 +39,9 @@ h1{
     margin-top: -19%;
     margin-left: -30%;
 }
+/* -------------->
+  Images
+<--------------*/
 .top-banner{
     background-image: url(images/banner/background.jpg);
     background-repeat: no-repeat;
@@ -55,6 +58,9 @@ h1{
     padding: 10px 30px;
     border-radius: 1232px;
 } 
+/*---------------->
+Grid design 
+<----------------*/
 .card img{
     margin-top: 16px;
     width: 300px;
@@ -84,6 +90,9 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
 }
+/* ---------------------->
+Highlight preview 
+<------------------------*/
 .match{
     display: flex;
     margin-left: 130px;
@@ -98,6 +107,9 @@ h1{
 .highlight{
     font-size: 60px;
 }
+/* ------------------>
+video section
+<-------------------- */
 .container{
     width: 80%;
     margin: 80px auto;
@@ -175,5 +187,88 @@ video:focus{
     right: 10px;
     width: 30px;
     cursor: pointer;
+}
+/* -------------------->
+footer 
+<-----------------------*/
+.footer{
+    padding-left: 37%;
+}
+.footer img{
+    width: 350px;
+
+}
+
+.footerdiv{
+    display: flex;
+    justify-content: center;
+}
+a{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(233, 232, 232);
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px;
+    line-height: 114px;
+    box-shadow: 1px 4px 5px 1px rgb(212, 208, 208);
+}
+a i{
+    font-size: 40px;
+    transition: all 0.3s linear;
+}
+a:hover i{
+    transform: scale(1.4);
+}
+.fa-facebook-f{
+    color: rgb(50, 74, 179);
+}
+.fa-instagram{
+    color: rgb(194, 52, 187);
+}
+.fa-youtube{
+    color: rgb(248, 24, 24);
+}
+.fa-linkedin{
+    color: rgb(44, 146, 206);
+}
+.copyright{
+    text-align: center;
+    font-size: 15px;
+}
+/*---------------------->
+  Mobile Devices 
+  <----------------------*/
+  @media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .half-width, .blogs, .grid-blog{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .match{
+        flex-direction:column;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .flexible-container{
+        display: grid;
+    }
+  }
+   /* ------------------------->
+   Tablet Devices 
+  < ----------------------------*/
+   @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+    .half-width, .blogs, .grid-blog{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flexible-container{
+        display: grid;
+    }
+    
 }
 
