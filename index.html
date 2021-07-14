@@ -171,6 +171,64 @@
             <img src="images/match.png" alt="">
         </div>
     </section>
+    <section>
+        <div class="container">
+            <h1>Watch Live Football</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feature-img">
+                        <img src="media/messi1.png" width="100%">
+                        <img src="media/play.png" class="play-btn" onclick="playVideo('media/ab1.mp4')">
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="media/rsz_messi2.png">
+                            <img src="media/play.png" class="play-btn" onclick="playVideo('media/ab2.mp4')">
+                        </div>
+                        <p>Highlights of copa america 2021</p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="media/rsz_messi4.png">
+                            <img src="media/play.png" class="play-btn" onclick="playVideo('media/ab1.mp4')">
+                        </div>
+                        <p>Highlights of copa america 2021</p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="media/rsz_lionel-messijpg.jpg">
+                            <img src="media/play.png" class="play-btn" onclick="playVideo('media/ab1.mp4')">
+                        </div>
+                        <p>Highlights of copa america 2021</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="video-player" id="videoPlayer">
+            <video width='100%' controls id="myVideo">
+                <source src="media/ab1.mp4" type="video/mp4">
+            </video>
+            <img src="media/close.png" class="close-btn" onclick="stopVideo()">
+        </div>
+        <script>
+            var videoPlayer = document.getElementById("videoPlayer");
+            var myVideo = document.getElementById("myVideo");
+
+            function stopVideo() {
+
+                videoPlayer.style.display = "none";
+            }
+            function playVideo(file) {
+                myVideo.src = file;
+                videoPlayer.style.display = "block";
+            }
+        </script>
+    </section>
 </body>
 
 </html>
